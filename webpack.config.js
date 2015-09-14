@@ -1,11 +1,11 @@
-var { PORT as SERVER_PORT } from './config';
+var config = require('./config');
 var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:' + SERVER_PORT,
+    'webpack-dev-server/client?http://localhost:' + config.SERVER_PORT,
     'webpack/hot/only-dev-server',
     './src/index'
   ],

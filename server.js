@@ -1,5 +1,4 @@
-var { PORT as SERVER_PORT } from './config';
-
+var serverConfig = require('./config');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
@@ -8,10 +7,10 @@ new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true
-}).listen(PORT, 'localhost', function (err, result) {
+}).listen(serverConfig.SERVER_PORT, 'localhost', function (err, result) {
   if (err) {
     console.log(err);
   }
 
-  console.log('Listening at localhost:' + SERVER_PORT);
+  console.log('Listening at localhost:' + serverConfig.SERVER_PORT);
 });

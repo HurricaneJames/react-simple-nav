@@ -1,1 +1,3 @@
-export const PORT = 8090;
+module.exports = {
+  SERVER_PORT: 8090
+}
