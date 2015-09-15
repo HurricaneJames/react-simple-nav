@@ -19,4 +19,16 @@ var merge = function() {
 
 export default {
   merge: merge,
+  button: {
+    large: {
+      img: {
+        width: 64, height: 64
+      }
+    },
+    small: {
+      img: {
+        width: 16, height: 16
+      }
+    }
+  }
 };
